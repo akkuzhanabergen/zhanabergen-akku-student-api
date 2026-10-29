@@ -6,7 +6,7 @@
 
 ## What I built
 
-This is my personal Student CRUD API for the DevOps midterm. The API saves students in PostgreSQL, validates request data, and returns HTTP 404 if a student does not exist. The project also includes a Linux system-report script, Git feature branches and tag, a multi-stage Dockerfile, and a Jenkins pipeline.
+This is my personal Student CRUD API for the DevOps midterm. The API saves students in PostgreSQL, lists them by ID, validates request data, and returns HTTP 404 if a student does not exist. The project also includes a Linux system-report script, Git feature branches and tag, a multi-stage Dockerfile, and a Jenkins pipeline.
 
 ## Project structure
 

@@ -75,6 +75,16 @@ class StudentApiIntegrationTest {
     }
 
     @Test
+    void listStudentsIsSortedById() throws Exception {
+        repository.save(new Student("First", "one@example.com", "IT", 1));
+        repository.save(new Student("Second", "two@example.com", "IT", 2));
+        mvc.perform(get("/api/students"))
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$[0].fullName").value("First"))
+            .andExpect(jsonPath("$[1].fullName").value("Second"));
+    }
+
+    @Test
     void infoContainsStudentName() throws Exception {
         mvc.perform(get("/api/info"))
             .andExpect(status().isOk())
