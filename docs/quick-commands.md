@@ -2,6 +2,7 @@
 
 ```bash
 cd zhanabergen-akku-student-api
+chmod +x gradlew scripts/*.sh  # needed with some ZIP extractors
 # Task 1: Linux (on Mac reports show Darwin, use Ubuntu if Linux evidence is mandatory)
 ./scripts/task1_setup.sh
 ./scripts/Zhanabergen_Akku_system_report.sh

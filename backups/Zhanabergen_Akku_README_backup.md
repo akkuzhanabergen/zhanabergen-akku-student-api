@@ -25,6 +25,7 @@ This is my personal Student CRUD API for the DevOps midterm. The API saves stude
 Requirements: Docker Desktop (with Docker Compose) and internet access for the first Gradle dependency download. To run Gradle separately, install Java 21. Docker builds include the JDK.
 
 ```bash
+chmod +x gradlew scripts/*.sh  # after extracting ZIP, if executable bits were lost
 cp .env.example .env
 # Open .env and choose your own strong PostgreSQL password.
 docker compose up -d --build
