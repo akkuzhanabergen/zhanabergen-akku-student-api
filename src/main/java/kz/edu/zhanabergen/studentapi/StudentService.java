@@ -1,6 +1,7 @@
 package kz.edu.zhanabergen.studentapi;
 
 import java.util.List;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,7 +15,8 @@ public class StudentService {
 
     @Transactional(readOnly = true)
     public List<StudentResponse> findAll() {
-        return repository.findAll().stream().map(StudentResponse::from).toList();
+        return repository.findAll(Sort.by(Sort.Direction.ASC, "id")).stream()
+            .map(StudentResponse::from).toList();
     }
 
     @Transactional(readOnly = true)
