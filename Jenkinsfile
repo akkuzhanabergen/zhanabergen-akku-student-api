@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'docker-gradle-jdk21' }
+    agent { label 'docker-gradle-jdk17' }
 
     options {
         timestamps()

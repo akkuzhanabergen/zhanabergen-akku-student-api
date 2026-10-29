@@ -2,7 +2,7 @@
 
 **Student:** Zhanabergen Akku (Жанаберген Аққу)  
 **Course:** DevOps midterm — CRUD implementation and documentation  
-**Stack:** Java 21, Spring Boot 3.5.6, Gradle, PostgreSQL 16, Docker Compose, Jenkins
+**Stack:** Java 17, Spring Boot 3.5.6, Gradle, PostgreSQL 16, Docker Compose, Jenkins
 
 ## What I built
 
@@ -22,7 +22,7 @@ This is my personal Student CRUD API for the DevOps midterm. The API saves stude
 
 ## 1. Start the application
 
-Requirements: Docker Desktop (with Docker Compose) and internet access for the first Gradle dependency download. To run Gradle separately, install Java 21. Docker builds include the JDK.
+Requirements: Docker Desktop (with Docker Compose) and internet access for the first Gradle dependency download. To run Gradle separately, install Java 17. Docker builds include the JDK.
 
 ```bash
 chmod +x gradlew scripts/*.sh  # after extracting ZIP, if executable bits were lost
@@ -123,7 +123,7 @@ The actual merge-conflict history can be inspected with `git log --all --graph -
 
 - Create a Pipeline job named `Zhanabergen_Akku_Student_API`.
 - Configure it as **Pipeline script from SCM** → Git → GitHub repository URL → branch `*/main` → Script Path `Jenkinsfile`.
-- Run on a Jenkins agent labelled `docker-gradle-jdk21`, with working **Docker CLI + Docker daemon access** and network access to Gradle/Maven repositories. JDK 21 must be installed; the Gradle wrapper downloads Gradle 8.14.3.
+- Run on a Jenkins agent labelled `docker-gradle-jdk17`, with working **Docker CLI + Docker daemon access** and network access to Gradle/Maven repositories. JDK 17 must be installed; the Gradle wrapper downloads Gradle 8.14.3.
 - Jenkinsfile has five stages: Checkout, Build, Test, Docker Build, Verify.
 - `pollSCM('H/2 * * * *')` checks for new Git commits roughly every two minutes; verify automatic runs in the Jenkins job history.
 - Follow `docs/jenkins-failure-demo.md` to show one controlled failed build and recovery on a test branch.

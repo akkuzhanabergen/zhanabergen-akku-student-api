@@ -1,5 +1,5 @@
 #!/bin/sh
-# Minimal Gradle distribution launcher (requires Java 21).
+# Minimal Gradle distribution launcher (requires Java 17).
 set -e
 APP_HOME=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 cd "$APP_HOME"
