@@ -1,7 +1,7 @@
 # Student CRUD API — Zhanabergen Akku
 
 **Student:** Zhanabergen Akku (Жанаберген Аққу)  
-**Course:** DevOps midterm — Spring Boot CRUD implementation  
+**Course:** DevOps midterm — CRUD implementation and documentation  
 **Stack:** Java 21, Spring Boot 3.5.6, Gradle, PostgreSQL 16, Docker Compose, Jenkins
 
 ## What I built

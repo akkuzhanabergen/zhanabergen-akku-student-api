@@ -1,12 +1,12 @@
 # Student CRUD API — Zhanabergen Akku
 
 **Student:** Zhanabergen Akku (Жанаберген Аққу)  
-**Course:** DevOps midterm  
+**Course:** DevOps midterm — CRUD implementation and documentation  
 **Stack:** Java 21, Spring Boot 3.5.6, Gradle, PostgreSQL 16, Docker Compose, Jenkins
 
 ## What I built
 
-This is my personal Student CRUD API for the DevOps midterm. The API saves students in PostgreSQL, validates request data, and returns HTTP 404 if a student does not exist. The project also includes a Linux system-report script, Git feature branches and tag, a multi-stage Dockerfile, and a Jenkins pipeline.
+This is my personal Student CRUD API for the DevOps midterm. The API saves students in PostgreSQL, lists them by ID, validates request data, and returns HTTP 404 if a student does not exist. The project also includes a Linux system-report script, Git feature branches and tag, a multi-stage Dockerfile, and a Jenkins pipeline.
 
 ## Project structure
 
@@ -17,7 +17,7 @@ This is my personal Student CRUD API for the DevOps midterm. The API saves stude
 - `Dockerfile` — JDK build stage and smaller JRE runtime stage
 - `docker-compose.yml` — app + PostgreSQL, health check, network and volume
 - `Jenkinsfile` — Checkout, Build, Test, Docker Build, Verify
-- `build.gradle`, `settings.gradle`, `gradlew`, `gradle/` — build files
+- `build.gradle`, `settings.gradle`, `gradlew`, `gradle/` — build files (included minimal Gradle downloader; can be replaced by official wrapper)
 - `.env.example` — example database settings (real `.env` is ignored by Git)
 
 ## 1. Start the application
