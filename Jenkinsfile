@@ -24,12 +24,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'chmod +x ./gradlew && ./gradlew --no-daemon -Dorg.gradle.java.installations.paths=/opt/jdk17 clean compileJava'
+                sh 'chmod +x ./gradlew && JAVA_HOME=/opt/jdk17 PATH=/opt/jdk17/bin:$PATH ./gradlew --no-daemon clean compileJava'
             }
         }
         stage('Test') {
             steps {
-                sh './gradlew --no-daemon -Dorg.gradle.java.installations.paths=/opt/jdk17 test'
+                sh 'JAVA_HOME=/opt/jdk17 PATH=/opt/jdk17/bin:$PATH ./gradlew --no-daemon test'
             }
         }
         stage('Docker Build') {
